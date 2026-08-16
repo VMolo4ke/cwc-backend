@@ -5,15 +5,12 @@ import {
   integer,
   timestamp,
   jsonb,
-  pgEnum,
 } from 'drizzle-orm/pg-core';
-
-export const coffeeSizeEnum = pgEnum('coffee_size', ['S', 'M', 'L']);
 
 export const coffeeMenu = pgTable('coffee_menu', {
   id: serial('id').primaryKey(),
   name: text('name').notNull(),
-  size: coffeeSizeEnum('size').notNull(),
+  size: text('size').notNull(),
   price: integer('price').notNull(),
   description: text('description'),
 });
