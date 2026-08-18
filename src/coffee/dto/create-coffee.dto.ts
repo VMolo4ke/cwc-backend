@@ -6,7 +6,7 @@ export class CreateCoffeeDto {
   name!: string;
 
   @IsNotEmpty()
-  size!: CoffeeSize;
+  size!: string;
 
   @IsNumber()
   @IsNotEmpty()
